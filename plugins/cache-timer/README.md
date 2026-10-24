@@ -2,9 +2,7 @@
 
 Counts down the prompt cache's time-to-live, starting from the main conversation's last API request. It shows on the line under the prompt:
 
-```
-cache 54:12 left
-```
+![cache-timer showing cache 59:56 left](docs/cache-timer.png)
 
 - The countdown turns yellow in the last 5 minutes (the last minute on a 5-minute TTL), and a toast reminds you to send something to keep the cache warm.
 - Once the cache has expired it reads `cache expired 12m ago`.
@@ -12,6 +10,8 @@ cache 54:12 left
 - `/clear`, a compaction or a switch to a different model empties the cache, so the timer disappears until the next request.
 
 It shares the row with [context-meter](../context-meter/) and [usage-limits](../usage-limits/) when they're installed, and sits between them.
+
+![context-meter, cache-timer and usage-limits sharing one row](docs/shared-row.png)
 
 ## Options
 
