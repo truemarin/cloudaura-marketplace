@@ -2,9 +2,7 @@
 
 Shows how full the context window is, and how much the last turn added, on the line under the prompt:
 
-```
-ctx ▰▰▱▱▱ 42% 84k/200k Δ+3.1k
-```
+![context-meter showing ctx 5% 46.1k/1M Δ+46.1k](docs/context-meter.png)
 
 - The gauge is green below 50%, yellow from 50% and red from 80%.
 - `Δ` is what the last main-conversation turn added. After a compaction it reads as a negative number followed by `compacted`.
@@ -13,6 +11,8 @@ ctx ▰▰▱▱▱ 42% 84k/200k Δ+3.1k
 - `/clear` resets the meter.
 
 It shares the row with [cache-timer](../cache-timer/) and [usage-limits](../usage-limits/) when they're installed, and always comes first.
+
+![context-meter, cache-timer and usage-limits sharing one row](docs/shared-row.png)
 
 ## Install
 
