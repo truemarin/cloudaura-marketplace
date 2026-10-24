@@ -16,6 +16,10 @@ Queues a prompt to send once your usage limit resets, or at a time you choose.
 - When a turn is cut off by the usage limit and nothing is queued yet, a toast suggests `/after-reset continue`.
 - The reset time is learned from Claude Code's first reply and remembered across sessions. Until it's known, use `in` or `at`.
 
+![Queuing and listing a prompt with after-reset](docs/after-reset.png)
+
+*Queuing a prompt, listing the queue, and the status line counting down.*
+
 ## Install
 
 ```bash
